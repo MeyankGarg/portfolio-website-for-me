@@ -162,6 +162,8 @@ body {
   padding: 3px;
   transition: top 1s, left 1s, height 0.2s, width 0.2s;
 }
+
+
 .social_media_handels img {
   height: 100%;
   width: 100%;
@@ -171,6 +173,7 @@ body {
   margin: auto auto;
 
   box-shadow: 0px 0px 8px rgba(62, 72, 134, 0.534);
+  /* box-shadow: 0px 0px 8px rgba(62, 72, 134, 0.534) ; */
 }
 @keyframes rotate_image_little {
   0% {
@@ -304,6 +307,46 @@ body {
   /* background-color: aqua; */
   clip-path: circle(50% at 50% 68%);
 }
+
+#parent_container #sidebar #coding_profile{
+  /* background-color: red; */
+  width: 95%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+border-radius: 50%;
+display: none;
+
+
+
+
+
+}
+#parent_container #sidebar #coding_profile a:hover{
+  
+animation-name: rotate_image_little;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+/* box-shadow: 0px 0px 8px rgba(62, 72, 134, 0.8); */
+
+
+}
+
+
+#parent_container #sidebar #coding_profile img{
+  height: 100%;
+  width: 100%;
+  max-height: 30px;
+  max-width: 30px;
+  border-radius: 50%;
+  margin: auto auto;
+
+  box-shadow: 0px 0px 8px rgba(62, 72, 134, 0.534);
+
+
+  
+}
+
 
 #parent_container #sidebar .nav_container {
   height: 325px;
@@ -912,6 +955,9 @@ border-radius: 40px;
   #parent_container #sidebar {
     display: block !important;
   }
+  #parent_container #sidebar #coding_profile{
+    display: none !important;
+  }
   #upper_nav {
     /* background-color: blue; */
   }
@@ -936,6 +982,9 @@ border-radius: 40px;
     display: none;
     position: fixed;
   }
+  #parent_container #sidebar #coding_profile{
+    display: flex !important;
+  }
   #upper_nav #hanburger_container {
     display: block;
   }
@@ -948,6 +997,9 @@ border-radius: 40px;
   #parent_container #sidebar {
     display: none;
     position: fixed;
+  }
+  #parent_container #sidebar #coding_profile{
+    display: flex !important;
   }
   #upper_nav #hanburger_container {
     display: block;
