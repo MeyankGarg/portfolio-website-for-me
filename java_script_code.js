@@ -33,10 +33,10 @@ for(let i in education_title){
         let second_child=education_title[i].children[1];
        
    
-    if(second_child.style.height=="0px" || second_child.style.height=="" ){
+    if(second_child.style.maxHeight=="0px" || second_child.style.maxHeight=="" ){
        
         first_child.children[1].style.transform="rotate(45deg)";
-        second_child.style.height="auto";
+        second_child.style.maxHeight="120px";
 
 
         
@@ -44,7 +44,7 @@ for(let i in education_title){
     }else{
 
         first_child.children[1].style.transform="rotate(90deg)";
-        second_child.style.height="0px";
+        second_child.style.maxHeight="0px";
 
        
     }
@@ -65,7 +65,7 @@ function change_display(){
     // console.log();
     if(sid_bar.style.display=='none' || sid_bar.style.display==''){
         sid_bar.style.display="block";
-        sid_bar.style.zIndex="2";
+        sid_bar.style.zIndex="20";
         sid_bar.style.width="275px";
         sid_bar.focus();
 
