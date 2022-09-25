@@ -87,11 +87,35 @@ let fix_display_bug=document.getElementById("upper_nav");
 console.log(fix_display_bug.style.width);
 
 
-let preloader=document.getElementById("loader_container");
-window.addEventListener("load",function(){
-    preloader.style.display="none"
+function remove_preloader(){
+    document.getElementById("loader_container").style.display="none"
     document.getElementById("drone_container").style.zIndex="4";
     document.getElementById("drone_container").style.filter="invert(0)";
+
+}
+
+function tansition_before_removal(){
+    document.getElementById("background_container_id").style.animation="reduce_opacity_to_zero 3s   1 ";
+    document.getElementById("profile_image_container_id").style.animation="reduce_dimention_to_zero 2s  1s 1 ";
+    document.getElementById("coding_media_handle_container_id").style.animation="rotate_coding_container 2s   1 ";
+    document.getElementById("profile_background_container_id").style.animation="rotate_profile_background_container 1s infinite,rotate_coding_container 2s  1s 1 ";
+
+
+
+}
+
+window.addEventListener("load",function(){
+
+    // remove_preloader();
+    // let load_time=new Date();
+    // console.log(load_time);
+    tansition_before_removal();
+    setTimeout(remove_preloader, 3000);
+
+
+
+    
+   
     // drone.document.style.zIndex=4;
     // drone.document.style.filter="invert(0)";
 })
