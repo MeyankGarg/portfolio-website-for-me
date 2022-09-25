@@ -22,6 +22,121 @@ body {
 
 
 }
+/* ******************************* */
+
+#loader_container .background_container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(26, 24, 24);
+  display: flex;
+  align-items: center;
+  /* align-items: center; */
+  position: fixed;
+  flex-direction: column;
+  z-index: 50;
+  /* display: none; */
+
+}
+
+#loader_container .profile_image_container {
+  height: 200px;
+  width: 200px;
+  /* background-color: aliceblue; */
+  position: absolute;
+
+  border-radius: 50%;
+
+  top: 15%;
+
+  background: url("./images/Mayank\ Garg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-radius: 50%;
+}
+
+#loader_container .coding_media_handle_container {
+  height: 70px;
+  width: 260px;
+  /* background-color: white; */
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@keyframes rotate_image_little {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(10deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+}
+
+#loader_container .coding_media_handle_container img {
+  height: 100%;
+  width: 100%;
+  max-height: 40px;
+  max-width: 40px;
+  border-radius: 50%;
+  margin: auto auto;
+  /* background-color: red; */
+  margin: 2px;
+  animation-name: rotate_image_little;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  box-shadow: 3px 3px 3px grey;
+  filter: invert(1);
+}
+
+#loader_container #leetcode_img{
+  animation-delay: 0.2s;
+}
+#loader_container #codeforces_id{
+  animation-delay: 0.4s;
+}
+#loader_container #linkedin_id{
+  animation-delay: 0.6s;
+}
+#loader_container  #github_id{
+  animation-delay: 0.8s;
+}
+
+
+
+
+
+
+
+
+@keyframes rotate_profile_background_container {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#loader_container .profile_background_container {
+  height: 202px;
+  width: 210px;
+  /* background-color: red; */
+  background: linear-gradient(#e66465, #9198e5);
+  /* transition: transform 1s; */
+  animation: rotate_profile_background_container 1s infinite;
+
+  position: absolute;
+  border-radius: 50%;
+  top: 15%;
+}
+
+/* ******************************* */
 @keyframes move_drone {
   0%{
     top: 20%;
@@ -50,14 +165,16 @@ body {
 
   }
 }
-.drone_container {
+#drone_container {
   height: 100px;
   width: 100px;
   /* background-color: azure; */
   position: fixed;
   transition: top 2s;
   animation: move_drone 10s   infinite  alternate;
-  z-index: 4  ;
+  /* z-index: 4; */
+  z-index: 51 ;
+  filter: invert(1);
 
 
  
@@ -71,7 +188,7 @@ body {
   }
 }
 
-.drone_container .body_container {
+#drone_container .body_container {
   height: 90%;
   width: 90%;
   /* background-color: aquamarine; */
@@ -91,7 +208,7 @@ body {
     height: 8%;
   }
 }
-.drone_container .eye_container {
+#drone_container .eye_container {
   height: 8%;
   width: 8%;
   position: absolute;
@@ -104,12 +221,12 @@ body {
   /* background-color: red; */
 }
 
-.drone_container .eye_container img {
+#drone_container .eye_container img {
   height: 100%;
   width: 100%;
 }
 
-.drone_container .left_wing_container {
+#drone_container .left_wing_container {
   height: 15%;
   width: 42%;
   /* background-color: red; */
@@ -119,12 +236,12 @@ body {
   top: 11%;
   left: 2%;
 }
-.drone_container .left_wing_container img {
+#drone_container .left_wing_container img {
   /* height: 100%; */
   width: 100%;
   animation: rorate_wings 0.1s infinite;
 }
-.drone_container .right_wing_container {
+#drone_container .right_wing_container {
   height: 15%;
   width: 42%;
   /* background-color: blue; */
@@ -134,13 +251,13 @@ body {
   top: 11%;
   left: 55%;
 }
-.drone_container .right_wing_container img {
+#drone_container .right_wing_container img {
   /* height: 100%; */
   width: 100%;
   animation: rorate_wings 0.1s infinite;
 }
 
-.drone_container .body_container img {
+#drone_container .body_container img {
   height: 100%;
 }
 .social_media_handels {
@@ -149,7 +266,7 @@ body {
   /* background-color: black; */
   height: 300px;
   width: 50px;
-  z-index: 105;
+  z-index: 30;
   margin: 2px;
   display: flex;
   align-items: center;
@@ -204,7 +321,7 @@ body {
   width: 100%;
   background-color: black;
   position: fixed;
-  z-index: 100;
+  z-index: 22;
   color: white;
   display: flex;
   align-items: center;

@@ -85,3 +85,13 @@ function change_display(){
 
 let fix_display_bug=document.getElementById("upper_nav");
 console.log(fix_display_bug.style.width);
+
+
+let preloader=document.getElementById("loader_container");
+window.addEventListener("load",function(){
+    preloader.style.display="none"
+    document.getElementById("drone_container").style.zIndex="4";
+    document.getElementById("drone_container").style.filter="invert(0)";
+    // drone.document.style.zIndex=4;
+    // drone.document.style.filter="invert(0)";
+})
