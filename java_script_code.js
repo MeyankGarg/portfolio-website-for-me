@@ -62,12 +62,15 @@ hanburger.addEventListener('click',change_display);
 function change_display(){
     let sid_bar=document.getElementById("sidebar");
     let parent_c=document.getElementById("parent_container");
+    let background_of_slidebar=document.getElementById("background_for_slider");
     // console.log();
     if(sid_bar.style.display=='none' || sid_bar.style.display==''){
         sid_bar.style.display="block";
         sid_bar.style.zIndex="20";
         sid_bar.style.width="275px";
         sid_bar.focus();
+        background_of_slidebar.style.display="block";
+
 
         let coding_pro=document.getElementById("coding_profile");
         coding_pro.style.display="none";
@@ -76,6 +79,7 @@ function change_display(){
 
     }else{
         sid_bar.style.display='none';
+        background_of_slidebar.style.display="none";
         let coding_pro=document.getElementById("coding_profile");
         coding_pro.style.display="flex";
 

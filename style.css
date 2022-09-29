@@ -341,6 +341,22 @@ body {
   animation-iteration-count: infinite;
   box-shadow: 0px 0px 8px black;
 }
+
+#background_for_slider{
+  background: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5));
+  /* background-color: red; */
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 19;
+  display: none;
+
+
+}
+
+
+
+
 #upper_nav {
   height: 75px;
   width: 100%;
@@ -424,6 +440,7 @@ body {
   overflow: auto;
   transition: display 5s;
   z-index: 20 ;
+  left: 0;
 }
 
 #parent_container #sidebar .img_container {
